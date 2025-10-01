@@ -359,6 +359,63 @@ footer {
 /* ====================================================================== */
 /* --- RESPONSIVENESS (PHONES / EXTRA SMALL SCREENS) --- */
 /* ====================================================================== */
+@media (max-width: 768px) {
+    /* Header Stacking and Size Reduction */
+    header {
+        flex-direction: column;
+        text-align: center;
+        /* Significantly reduced top/bottom padding for a more compact header */
+        padding: 10px 5%; 
+    }
+
+    nav {
+        /* Reduced margin to pull navigation closer to the logo */
+        margin-top: 5px;
+    }
+
+    nav a {
+        display: block;
+        /* Reduced vertical spacing between links */
+        margin: 3px 0; 
+    }
+
+    /* Hero adjustments */
+    .hero {
+        background-attachment: scroll; 
+    }
+
+    .tagline {
+        font-size: 2em; 
+        letter-spacing: 2px;
+    }
+
+    .hero-logo {
+        max-width: 250px; 
+    }
+    
+    /* General Section adjustments */
+    h2 {
+        font-size: 2em;
+    }
+
+    /* Project Buttons stacking */
+    .project-buttons {
+        flex-direction: column; 
+        max-width: 100%;
+        padding: 0 5%;
+        gap: 15px;
+    }
+
+    /* Form input sizes are generally good, but ensure padding is not excessive */
+    #message-form input[type="text"],
+    #message-form textarea {
+        padding: 12px;
+    }
+}
+
+/* ====================================================================== */
+/* --- RESPONSIVENESS (PHONES / EXTRA SMALL SCREENS) --- */
+/* ====================================================================== */
 @media (max-width: 480px) {
     .logo {
         font-size: 1.2em; 
@@ -366,6 +423,23 @@ footer {
 
     .container {
         padding: 50px 3%; 
+    }
+    
+    /* Header Size Reduction for smaller phones */
+    header {
+        /* Further reduced top/bottom padding for maximum compactness */
+        padding: 8px 5%; 
+    }
+    
+    nav {
+        /* Minimized margin */
+        margin-top: 3px;
+    }
+    
+    nav a {
+        font-size: 0.9em;
+        /* Minimized vertical spacing */
+        margin: 2px 5px; 
     }
 
     /* Hero adjustments for small phones */
@@ -386,12 +460,6 @@ footer {
         margin-bottom: 30px;
     }
 
-    /* Make sure navigation links are spaced well */
-    nav a {
-        font-size: 0.9em;
-        margin: 5px 8px;
-    }
-
     /* Contact forms and buttons */
     #send-sms-btn, .call-btn {
         padding: 15px; 
@@ -403,4 +471,3 @@ footer {
         font-size: 1em; 
     }
 }
-
