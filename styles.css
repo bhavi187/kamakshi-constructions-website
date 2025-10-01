@@ -84,7 +84,7 @@ nav a:hover {
     position: relative; 
     padding: 0;
     
-    background-image: url('photos/Broucher Model.jpg'); 
+    background-image: url('Broucher Model.jpg'); 
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -403,3 +403,4 @@ footer {
         font-size: 1em; 
     }
 }
+
