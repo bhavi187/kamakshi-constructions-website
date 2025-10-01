@@ -327,7 +327,7 @@ footer {
     }
 
     .hero-logo {
-        max-width: 250px; 
+        max-width: 320px; 
     }
     
     /* General Section adjustments */
@@ -408,7 +408,7 @@ footer {
         min-height: 80vh; 
     }
     .hero-logo {
-        max-width: 250px; 
+        max-width: 320px; 
     }
 
     .tagline {
@@ -432,5 +432,6 @@ footer {
         font-size: 1em; 
     }
 }
+
 
 
