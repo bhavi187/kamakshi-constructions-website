@@ -1,0 +1,405 @@
+/* --- Global Reset and Variables --- */
+:root {
+    --color-black-deep: #0a0a0a; 
+    --color-gold: #c3b069; 
+    --color-white-accent: #f0f0f0; 
+    --font-primary: 'Georgia', serif;
+    --font-secondary: 'Arial', sans-serif;
+    --transition-speed: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-secondary);
+    /* Linear Metallic Gradient Background (Main Body) */
+    background: linear-gradient(135deg, #1f2430 0%, #0a0a0a 40%, #0a0a0a 60%, #1f2430 100%);
+    color: var(--color-white-accent);
+    line-height: 1.6;
+}
+
+h1, h2 {
+    font-family: var(--font-primary);
+    color: var(--color-gold);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transition: color var(--transition-speed);
+}
+
+a {
+    color: var(--color-gold);
+    text-decoration: none;
+    transition: color var(--transition-speed), transform var(--transition-speed);
+}
+
+a:hover {
+    color: var(--color-white-accent); 
+    transform: translateY(-2px);
+}
+
+/* --- Header and Navigation --- */
+header {
+    background-color: var(--color-black-deep);
+    color: var(--color-white-accent);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+}
+
+.logo {
+    font-size: 1.5em;
+    font-family: var(--font-primary);
+    color: var(--color-gold);
+}
+
+nav a {
+    color: var(--color-white-accent);
+    margin-left: 20px;
+    padding: 5px 10px;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+    color: var(--color-gold);
+    border-bottom: 2px solid var(--color-gold);
+}
+
+/* --- HERO SECTION (FRONT PAGE) --- */
+.hero {
+    height: 100vh; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative; 
+    padding: 0;
+    
+    background-image: url('photos/Broucher Model.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: var(--color-white-accent);
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.hero-content-overlay {
+    position: relative; 
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%; 
+    width: 100%;
+    gap: 30px; 
+}
+
+.hero-logo {
+    max-width: 550px; 
+    height: auto;
+    filter: drop-shadow(0 0 10px rgba(195, 176, 105, 0.8));
+    transition: transform 0.5s ease;
+}
+
+.hero-logo1 {
+    max-width: 180px; 
+    height: auto;
+    filter: drop-shadow(0 0 10px rgba(195, 176, 105, 0.8));
+    transition: transform 0.5s ease;
+}
+
+.hero-logo:hover {
+    transform: scale(1.05);
+}
+
+.tagline {
+    font-size: 1.5em; 
+    margin: 0; 
+    padding: 0; 
+    border: none;
+    color: var(--color-gold);
+    text-shadow: 0 0 15px rgba(195, 176, 105, 0.9);
+    letter-spacing: 5px;
+}
+
+.tagline:hover {
+    transform: scale(1.05);
+}
+
+/* --- General Section Styling (Default black background) --- */
+.container {
+    padding: 80px 5%;
+    text-align: center;
+    background-color: var(--color-black-deep);
+    font-size: 1em; 
+}
+
+/* --- METALLIC GRADIENT ADDITION (LEFT TO RIGHT) --- */
+/* Apply a subtle metallic gradient to the Projects and About sections */
+#projects, #about, #contact {
+    /* Updated to horizontal gradient (left to right) */
+    background: linear-gradient(to right, #020657  0%, #000000 30%,#000000 60%, #020657 100%);
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5); /* Adds depth */
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 50px;
+}
+
+/* --- PROJECTS SECTION - WIDER BUTTONS AND REDIRECTION --- */
+.project-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 50px;
+    max-width: 900px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project-link {
+    flex-grow: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px; 
+    
+    background-color: transparent;
+    color: var(--color-gold);
+    padding: 15px 30px;
+    cursor: pointer;
+    border: 1px solid var(--color-gold);
+    transition: all var(--transition-speed);
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.project-link:hover {
+    background: linear-gradient(120deg, #1f1928 0%,#01054a 50%, #0e1598  );
+    color:var(--color-gold) ;
+    transform: scale(1.05); 
+    box-shadow: 0 0 15px rgba(195, 176, 105, 0.5);
+}
+
+/* --- About Section Specifics --- */
+.gold-text {
+    color: var(--color-gold);
+    font-weight: bold;
+}
+
+/* --- Contact Section --- */
+.contact-info p {
+    margin: 15px 0;
+    font-size: 1.2em;
+    color: var(--color-white-accent);
+}
+
+/* --- Help/Message Section (Form) --- */
+.help-section {
+    background-color: #151515;
+}
+
+#message-form {
+    max-width: 500px;
+    margin: 0 auto 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#message-form label {
+    text-align: left;
+    color: var(--color-gold);
+    font-weight: bold;
+}
+
+#message-form input[type="text"],
+#message-form textarea {
+    padding: 15px;
+    border: 1px solid var(--color-gold);
+    background-color: var(--color-black-deep);
+    color: var(--color-white-accent);
+    resize: vertical;
+}
+
+/* Targetting the WhatsApp button and Call button */
+#send-sms-btn, .call-btn {
+    background-color: var(--color-gold);
+    color: var(--color-black-deep);
+    padding: 18px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color var(--transition-speed), transform var(--transition-speed);
+}
+
+#send-sms-btn:hover, .call-btn:hover {
+    background-color: var(--color-white-accent);
+    color: var(--color-black-deep);
+    transform: translateY(-3px);
+}
+
+.call-option a {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--color-gold);
+    padding: 10px 20px;
+    border: 2px solid var(--color-gold);
+    font-size: 1.1em;
+    margin-top: 20px;
+}
+
+/* Form message for feedback */
+#form-message {
+    margin-top: 20px;
+    font-weight: bold;
+    color: var(--color-gold);
+    transition: opacity 0.5s;
+}
+
+.hidden {
+    opacity: 0;
+    display: block; 
+    height: 0; 
+    overflow: hidden;
+    padding: 0;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--color-black-deep);
+    color: var(--color-gold);
+    text-align: center;
+    padding: 25px;
+    font-size: 1em;
+    border-top: 1px solid var(--color-gold);
+}
+
+/* ====================================================================== */
+/* --- RESPONSIVENESS (TABLETS AND SMALLER) --- */
+/* ====================================================================== */
+@media (max-width: 768px) {
+    /* Header Stacking */
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 5%; 
+    }
+
+    nav {
+        margin-top: 15px;
+    }
+
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+
+    /* Hero adjustments */
+    .hero {
+        background-attachment: scroll; 
+    }
+
+    .tagline {
+        font-size: 2em; 
+        letter-spacing: 2px;
+    }
+
+    .hero-logo {
+        max-width: 250px; 
+    }
+    
+    /* General Section adjustments */
+    h2 {
+        font-size: 2em;
+    }
+
+    /* Project Buttons stacking */
+    .project-buttons {
+        flex-direction: column; 
+        max-width: 100%;
+        padding: 0 5%;
+        gap: 15px;
+    }
+
+    /* Form input sizes are generally good, but ensure padding is not excessive */
+    #message-form input[type="text"],
+    #message-form textarea {
+        padding: 12px;
+    }
+}
+
+/* ====================================================================== */
+/* --- RESPONSIVENESS (PHONES / EXTRA SMALL SCREENS) --- */
+/* ====================================================================== */
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.2em; 
+    }
+
+    .container {
+        padding: 50px 3%; 
+    }
+
+    /* Hero adjustments for small phones */
+    .hero {
+        min-height: 80vh; 
+    }
+    .hero-logo {
+        max-width: 180px; 
+    }
+
+    .tagline {
+        font-size: 1.5em; 
+        letter-spacing: 1px;
+    }
+
+    h2 {
+        font-size: 1.8em; 
+        margin-bottom: 30px;
+    }
+
+    /* Make sure navigation links are spaced well */
+    nav a {
+        font-size: 0.9em;
+        margin: 5px 8px;
+    }
+
+    /* Contact forms and buttons */
+    #send-sms-btn, .call-btn {
+        padding: 15px; 
+        font-size: 1.1em;
+    }
+    
+    .contact-info p,
+    .contact-info a {
+        font-size: 1em; 
+    }
+}
